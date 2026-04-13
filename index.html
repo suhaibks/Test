@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Wedding Invite</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -18,24 +19,27 @@
 
 body {
   font-family: 'Playfair Display', serif;
-  background: #f5efe8;
-  color: #333;
-  scroll-behavior: smooth;
+  background: #f4efe9;
+  color: #2f2f2f;
 }
 
 /* INTRO */
 #intro {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background: linear-gradient(#f5efe8, #e8d8cc);
+  background: #e9dfd5;
   cursor: pointer;
 }
 
-#intro h2 {
-  margin-top: 20px;
+#intro h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#intro p {
   letter-spacing: 2px;
 }
 
@@ -53,160 +57,107 @@ body {
 
 .hero h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: 48px;
+  font-size: 52px;
 }
 
 .hero h2 {
-  font-size: 28px;
+  font-size: 26px;
   margin-top: 10px;
 }
 
 /* SECTION */
 section {
-  padding: 80px 20px;
-  text-align: center;
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wedding Invite</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
-
-<style>
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Playfair Display', serif;
-  background: #f5efe8;
-  color: #333;
-  scroll-behavior: smooth;
-}
-
-/* INTRO */
-#intro {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: linear-gradient(#f5efe8, #e8d8cc);
-  cursor: pointer;
-}
-
-#intro h2 {
-  margin-top: 20px;
-  letter-spacing: 2px;
-}
-
-/* HERO */
-.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511') center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  padding: 70px 20px;
   text-align: center;
 }
 
-.hero h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 48px;
-}
-
-.hero h2 {
-  font-size: 28px;
-  margin-top: 10px;
-}
-
-/* SECTION */
-section {
-  padding: 80px 20px;
-  text-align: center;
+h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
 /* TIMELINE */
 .timeline {
   display: grid;
   grid-template-columns: 1fr 60px 1fr;
-  gap: 10px;
   align-items: center;
+  max-width: 700px;
+  margin: auto;
 }
 
-.timeline .center {
-  height: 500px;
-  background: repeating-linear-gradient(
-    to bottom,
-    #6b8e23,
-    #6b8e23 10px,
-    transparent 10px,
-    transparent 20px
-  );
+.line {
+  width: 4px;
+  height: 400px;
+  background: #6b8e23;
+  margin: auto;
 }
 
 .timeline .item {
   margin: 20px 0;
 }
 
+.left {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.right {
+  text-align: left;
+  padding-left: 20px;
+}
+
 /* CARDS */
 .card {
-  background: #fff;
+  background: white;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 14px;
   margin: 15px auto;
   max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 /* FAQ */
 .faq-item {
-  margin: 10px auto;
   max-width: 400px;
+  margin: 10px auto;
 }
 
 .faq-question {
   width: 100%;
   padding: 15px;
   border: none;
-  background: #fff;
+  background: white;
   cursor: pointer;
+  text-align: left;
 }
 
 .faq-answer {
   display: none;
   padding: 10px;
-  background: #f1f1f1;
+  background: #eee;
 }
 
-/* BOARDING PASS */
+/* BOARDING */
 .boarding {
   border: 2px dashed #aaa;
-  padding: 20px;
-  border-radius: 12px;
-  margin: 20px auto;
+  padding: 25px;
+  border-radius: 14px;
   max-width: 400px;
+  margin: auto;
 }
 
 .barcode {
   height: 50px;
+  margin-top: 15px;
   background: repeating-linear-gradient(
     90deg,
-    #000 2px,
+    #333 2px,
     transparent 2px,
     transparent 6px
   );
-  margin-top: 10px;
 }
 
-/* RSVP */
+/* FORM */
 form {
   max-width: 400px;
   margin: auto;
@@ -214,13 +165,15 @@ form {
 
 input {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 button {
-  padding: 12px;
   width: 100%;
+  padding: 14px;
   background: #333;
   color: white;
   border: none;
@@ -231,11 +184,10 @@ button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 12px;
-  border-radius: 50%;
   background: white;
+  border-radius: 50%;
+  padding: 14px;
   border: none;
-  cursor: pointer;
 }
 
 </style>
@@ -246,10 +198,9 @@ button {
 <!-- INTRO -->
 <div id="intro">
   <h1>G & N</h1>
-  <h2>Tap to Open</h2>
+  <p>Tap to Open</p>
 </div>
 
-<!-- MAIN -->
 <div id="main" style="display:none">
 
 <!-- HERO -->
@@ -261,15 +212,16 @@ button {
 <!-- TIMELINE -->
 <section>
   <h2>Schedule</h2>
+
   <div class="timeline">
 
-    <div class="item">Ceremony<br>18:00</div>
-    <div class="center"></div>
-    <div class="item">Lunch<br>14:00</div>
+    <div class="item left">Ceremony<br>18:00</div>
+    <div class="line"></div>
+    <div class="item right">Lunch<br>14:00</div>
 
-    <div class="item">Party<br>22:00</div>
+    <div class="item left">Party<br>22:00</div>
     <div></div>
-    <div class="item">Dinner<br>20:00</div>
+    <div class="item right">Dinner<br>20:00</div>
 
   </div>
 </section>
@@ -287,17 +239,17 @@ button {
 
   <div class="faq-item">
     <button class="faq-question">Can I bring children?</button>
-    <div class="faq-answer">Yes</div>
+    <div class="faq-answer">Yes, you can.</div>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">Parking available?</button>
-    <div class="faq-answer">Yes</div>
+    <button class="faq-question">Is parking available?</button>
+    <div class="faq-answer">Yes, parking is available.</div>
   </div>
 
 </section>
 
-<!-- BOARDING PASS -->
+<!-- BOARDING -->
 <section>
   <h2>Boarding Pass</h2>
   <div class="boarding">
@@ -310,9 +262,9 @@ button {
 <section>
   <h2>RSVP</h2>
   <form>
-    <input placeholder="Your Name" required>
-    <input type="email" placeholder="Email" required>
-    <input placeholder="Phone" required>
+    <input placeholder="Your Name">
+    <input placeholder="Email">
+    <input placeholder="Phone">
     <button>Submit</button>
   </form>
 </section>
@@ -321,316 +273,22 @@ button {
 
 <!-- MUSIC -->
 <button id="musicBtn">🔊</button>
-<audio id="music" src="https://www.bensound.com/bensound-music/bensound-love.mp3" loop></audio>
+<audio id="music" src="https://www.bensound.com/bensound-music/bensound-love.mp3"></audio>
 
 <script>
 
-/* INTRO OPEN */
 document.getElementById("intro").onclick = () => {
   document.getElementById("intro").style.display = "none";
   document.getElementById("main").style.display = "block";
 };
 
-/* FAQ */
 document.querySelectorAll(".faq-question").forEach(btn => {
   btn.onclick = () => {
-    const ans = btn.nextElementSibling;
+    let ans = btn.nextElementSibling;
     ans.style.display = ans.style.display === "block" ? "none" : "block";
   };
 });
 
-/* MUSIC */
-let playing = false;
-const music = document.getElementById("music");
-
-document.getElementById("musicBtn").onclick = () => {
-  if (!playing) {
-    music.play();
-    playing = true;
-  } else {
-    music.pause();
-    playing = false;
-  }
-};
-
-</script>
-
-</body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wedding Invite</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
-
-<style>
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Playfair Display', serif;
-  background: #f5efe8;
-  color: #333;
-  scroll-behavior: smooth;
-}
-
-/* INTRO */
-#intro {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: linear-gradient(#f5efe8, #e8d8cc);
-  cursor: pointer;
-}
-
-#intro h2 {
-  margin-top: 20px;
-  letter-spacing: 2px;
-}
-
-/* HERO */
-.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511') center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-}
-
-.hero h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 48px;
-}
-
-.hero h2 {
-  font-size: 28px;
-  margin-top: 10px;
-}
-
-/* SECTION */
-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-/* TIMELINE */
-.timeline {
-  display: grid;
-  grid-template-columns: 1fr 60px 1fr;
-  gap: 10px;
-  align-items: center;
-}
-
-.timeline .center {
-  height: 500px;
-  background: repeating-linear-gradient(
-    to bottom,
-    #6b8e23,
-    #6b8e23 10px,
-    transparent 10px,
-    transparent 20px
-  );
-}
-
-.timeline .item {
-  margin: 20px 0;
-}
-
-/* CARDS */
-.card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 15px;
-  margin: 15px auto;
-  max-width: 400px;
-}
-
-/* FAQ */
-.faq-item {
-  margin: 10px auto;
-  max-width: 400px;
-}
-
-.faq-question {
-  width: 100%;
-  padding: 15px;
-  border: none;
-  background: #fff;
-  cursor: pointer;
-}
-
-.faq-answer {
-  display: none;
-  padding: 10px;
-  background: #f1f1f1;
-}
-
-/* BOARDING PASS */
-.boarding {
-  border: 2px dashed #aaa;
-  padding: 20px;
-  border-radius: 12px;
-  margin: 20px auto;
-  max-width: 400px;
-}
-
-.barcode {
-  height: 50px;
-  background: repeating-linear-gradient(
-    90deg,
-    #000 2px,
-    transparent 2px,
-    transparent 6px
-  );
-  margin-top: 10px;
-}
-
-/* RSVP */
-form {
-  max-width: 400px;
-  margin: auto;
-}
-
-input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-}
-
-button {
-  padding: 12px;
-  width: 100%;
-  background: #333;
-  color: white;
-  border: none;
-}
-
-/* MUSIC BUTTON */
-#musicBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 12px;
-  border-radius: 50%;
-  background: white;
-  border: none;
-  cursor: pointer;
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- INTRO -->
-<div id="intro">
-  <h1>G & N</h1>
-  <h2>Tap to Open</h2>
-</div>
-
-<!-- MAIN -->
-<div id="main" style="display:none">
-
-<!-- HERO -->
-<section class="hero">
-  <h1>Jeffrey & Annabel</h1>
-  <h2>Wedding Day</h2>
-</section>
-
-<!-- TIMELINE -->
-<section>
-  <h2>Schedule</h2>
-  <div class="timeline">
-
-    <div class="item">Ceremony<br>18:00</div>
-    <div class="center"></div>
-    <div class="item">Lunch<br>14:00</div>
-
-    <div class="item">Party<br>22:00</div>
-    <div></div>
-    <div class="item">Dinner<br>20:00</div>
-
-  </div>
-</section>
-
-<!-- ACCOMMODATION -->
-<section>
-  <h2>Accommodation</h2>
-  <div class="card">Hotel Costa</div>
-  <div class="card">Hotel Love</div>
-</section>
-
-<!-- FAQ -->
-<section>
-  <h2>FAQ</h2>
-
-  <div class="faq-item">
-    <button class="faq-question">Can I bring children?</button>
-    <div class="faq-answer">Yes</div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question">Parking available?</button>
-    <div class="faq-answer">Yes</div>
-  </div>
-
-</section>
-
-<!-- BOARDING PASS -->
-<section>
-  <h2>Boarding Pass</h2>
-  <div class="boarding">
-    Destination: Ibiza
-    <div class="barcode"></div>
-  </div>
-</section>
-
-<!-- RSVP -->
-<section>
-  <h2>RSVP</h2>
-  <form>
-    <input placeholder="Your Name" required>
-    <input type="email" placeholder="Email" required>
-    <input placeholder="Phone" required>
-    <button>Submit</button>
-  </form>
-</section>
-
-</div>
-
-<!-- MUSIC -->
-<button id="musicBtn">🔊</button>
-<audio id="music" src="https://www.bensound.com/bensound-music/bensound-love.mp3" loop></audio>
-
-<script>
-
-/* INTRO OPEN */
-document.getElementById("intro").onclick = () => {
-  document.getElementById("intro").style.display = "none";
-  document.getElementById("main").style.display = "block";
-};
-
-/* FAQ */
-document.querySelectorAll(".faq-question").forEach(btn => {
-  btn.onclick = () => {
-    const ans = btn.nextElementSibling;
-    ans.style.display = ans.style.display === "block" ? "none" : "block";
-  };
-});
-
-/* MUSIC */
 let playing = false;
 const music = document.getElementById("music");
 
@@ -648,4 +306,3 @@ document.getElementById("musicBtn").onclick = () => {
 
 </body>
 </html>
-<!-- INTRO -->
